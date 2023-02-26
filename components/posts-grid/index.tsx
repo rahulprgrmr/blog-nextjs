@@ -4,7 +4,7 @@ import PostGridItem from "../post-grid-item";
 function PostsGrid(props: { posts: PostWithAuthor[] }) {
   const { posts } = props;
   return (
-    <div className="grid gap-4 gap-y-6 grid-cols-3 mt-10">
+    <div className="grid grid-cols-1 md:gap-4 md:gap-y-6 md:grid-cols-3 md:mt-10">
       {posts.map((post) => (
         <PostGridItem key={post.id} post={post} />
       ))}

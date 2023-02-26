@@ -6,7 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      minWidth: {
+        80: "20rem",
+      },
+    },
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };
