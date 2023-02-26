@@ -11,7 +11,7 @@ async function Login() {
   }
   return (
     <div className="register-container flex justify-center">
-      <div className="card w-1/2 bg-white rounded-lg py-10 px-6 drop-shadow-md mt-10">
+      <div className="card w-10/12 md:w-1/2 bg-white rounded-lg py-10 px-6 drop-shadow-md mt-10">
         <SiteLogo className="text-center text-black mb-6" />
         <p className="text-2xl font-bold text-center">
           Sign in to your account

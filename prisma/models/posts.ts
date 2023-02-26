@@ -26,3 +26,36 @@ export async function getFeaturedPosts(limit: number = 5) {
     },
   });
 }
+
+export async function getAllPosts(
+  searchText: string,
+  limit: number = 5,
+  offset: number = 0
+) {
+  let queryBody: Object = {
+    take: limit,
+    skip: offset,
+    include: {
+      author: true,
+    },
+  };
+  if (searchText && searchText.length) {
+    queryBody = {
+      ...queryBody,
+      where: {
+        OR: {
+          title: {
+            search: searchText,
+          },
+          summary: {
+            search: searchText,
+          },
+          content: {
+            search: searchText,
+          },
+        },
+      },
+    };
+  }
+  return await prisma.post.findMany(queryBody);
+}
