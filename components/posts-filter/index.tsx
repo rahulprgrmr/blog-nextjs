@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, SyntheticEvent, useState } from "react";
 import TextInput from "../ui/text-input";
 
 function PostsFilter() {
@@ -14,6 +14,10 @@ function PostsFilter() {
   function handleSearch(event: FormEvent) {
     event.preventDefault();
     router.push(`posts/?search=${searchText}`);
+  }
+  function handleInputReset(event: SyntheticEvent) {
+    event.preventDefault();
+    console.log("Resetted");
   }
   return (
     <div className="filter-component container mx-auto p-10 mt-10 text-center">
