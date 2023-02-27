@@ -59,3 +59,14 @@ export async function getAllPosts(
   }
   return await prisma.post.findMany(queryBody);
 }
+
+export async function getPostById(id: string) {
+  return await prisma.post.findUnique({
+    where: {
+      id,
+    },
+    include: {
+      author: true,
+    },
+  });
+}
