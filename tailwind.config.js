@@ -10,6 +10,9 @@ module.exports = {
       minWidth: {
         80: "20rem",
       },
+      spacing: {
+        128: "32rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

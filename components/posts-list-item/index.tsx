@@ -1,6 +1,7 @@
 import { PostWithAuthor } from "@/prisma/models/posts";
 import { CalendarIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 function PostsListItem({ post }: { post: PostWithAuthor }) {
   const { image, title, id, summary, slug, author, createdAt } = post;
@@ -15,7 +16,9 @@ function PostsListItem({ post }: { post: PostWithAuthor }) {
         />
       </div>
       <div className="post-detail my-2 md:my-0 md:ml-4 lg:ml-10">
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <Link href={`/posts/${slug}/${id}`}>
+          <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        </Link>
         <p className="line-clamp-3 md:line-clamp-5 block my-2">{summary}</p>
         <div className="post-footer flex mt-3">
           <span className="flex text-gray-500 items-center mr-5">
