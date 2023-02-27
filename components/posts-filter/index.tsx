@@ -13,11 +13,11 @@ function PostsFilter() {
   }
   function handleSearch(event: FormEvent) {
     event.preventDefault();
-    router.push(`posts/?search=${searchText}`);
-  }
-  function handleInputReset(event: SyntheticEvent) {
-    event.preventDefault();
-    console.log("Resetted");
+    if (searchText.trim().length) {
+      router.push(`/posts/?search=${searchText}`);
+    } else {
+      router.push(`/posts`);
+    }
   }
   return (
     <div className="filter-component container mx-auto p-10 mt-10 text-center">
