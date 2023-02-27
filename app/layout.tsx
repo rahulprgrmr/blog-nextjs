@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`bg-gradient-to-r from-purple-500 to-pink-500 ${barlow.className}`}
       >
         <div className="pt-4">
-          <header className="container mx-auto flex justify-between items-center">
+          <header className="container mx-auto flex justify-between items-center px-4">
             <SiteLogo />
             <MainNavigation />
           </header>

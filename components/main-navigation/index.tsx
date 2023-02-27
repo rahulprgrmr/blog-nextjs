@@ -26,7 +26,7 @@ function MainNavigation() {
     }
   }, [session]);
   return (
-    <nav className="text-white font-bold py-4">
+    <nav className="text-white font-bold py-4 mx-2">
       <ul className="flex items-center">
         {isLoggedIn ? (
           <>

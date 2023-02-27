@@ -8,7 +8,7 @@ function SiteLogo(props: { size?: string; className?: string }) {
   return (
     <Link href="/" className="text-white">
       <h1
-        className={`${greatVibes.className} sm:text-2xl md:text-5xl ${
+        className={`${greatVibes.className} text-3xl md:text-5xl ${
           className ?? ""
         }`}
       >
